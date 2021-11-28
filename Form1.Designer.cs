@@ -29,6 +29,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -39,8 +40,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_view = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
             this.pictureBox_Dovidka = new System.Windows.Forms.PictureBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Dovidka)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -135,6 +138,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_view.Text = "Перегляд даних";
             this.button_view.UseVisualStyleBackColor = false;
             this.button_view.Visible = false;
+            this.button_view.Click += new System.EventHandler(this.button_view_Click);
             // 
             // button_exit
             // 
@@ -185,6 +189,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Dovidka)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +207,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private System.Windows.Forms.Button button_view;
         public System.Windows.Forms.Button button_Work;
         private System.Windows.Forms.Button button_exit;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
 

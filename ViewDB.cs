@@ -29,6 +29,24 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 checkBox_Inventory.Enabled = false;
                 checkBox_ElDevice.Enabled = false;
                 checkBox_Payment.Enabled = false;
+                label2.Visible = true;
+                label2.Enabled = true;
+                label3.Visible = true;
+                label3.Enabled = true;
+                textBox_Floor_number.Visible = true;
+                textBox_Floor_number.Enabled = true;
+                textBox_number_room.Visible = true;
+                textBox_number_room.Enabled = true;
+                button3.Visible = true;
+                button3.Enabled = true;
+                button2.Visible = true;
+                button2.Enabled = true;
+                button4.Visible = true;
+                button4.Enabled = true;
+                checkBox_Male.Visible = true;
+                checkBox_Male.Enabled = true;
+                checkBox_Female.Visible = true;
+                checkBox_Female.Enabled = true;
             }
             else
             {
@@ -37,6 +55,24 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 checkBox_Inventory.Enabled = true;
                 checkBox_ElDevice.Enabled = true;
                 checkBox_Payment.Enabled = true;
+                label2.Visible = false;
+                label2.Enabled = false;
+                label3.Visible = false;
+                label3.Enabled = false;
+                textBox_Floor_number.Visible = false;
+                textBox_Floor_number.Enabled = false;
+                textBox_number_room.Visible = false;
+                textBox_number_room.Enabled = false;
+                button3.Visible = false;
+                button3.Enabled = false;
+                button2.Visible = false;
+                button2.Enabled = false;
+                button4.Visible = false;
+                button4.Enabled = false;
+                checkBox_Female.Visible = false;
+                checkBox_Female.Enabled = false;
+                checkBox_Male.Visible = false;
+                checkBox_Male.Enabled = false;
             }
         }
 
@@ -132,6 +168,24 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 checkBox_Resident.Enabled = false;
                 checkBox_Inventory.Enabled = false;
                 checkBox_ElDevice.Enabled = false;
+                label4.Enabled = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label5.Enabled = true;
+                label6.Enabled = true;
+                label6.Visible = true;
+                textBox_payment_id.Visible = true;
+                textBox_payment_id.Enabled = true;
+                textBox_payment_date.Visible = true;
+                textBox_payment_date.Enabled = true;
+                button_payment_Id.Visible = true;
+                button_payment_Id.Enabled = true;
+                button_payment_date.Visible = true;
+                button_payment_date.Enabled = true;
+                button_payment_studentId.Visible = true;
+                button_payment_studentId.Enabled = true;
+                textBox_payment_studentId.Visible = true;
+                textBox_payment_studentId.Enabled = true;
             }
             else
             {
@@ -140,6 +194,24 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 checkBox_Resident.Enabled = true;
                 checkBox_Inventory.Enabled = true;
                 checkBox_ElDevice.Enabled = true;
+                textBox_payment_id.Visible = false;
+                textBox_payment_id.Enabled = false;
+                textBox_payment_date.Visible = false;
+                textBox_payment_date.Enabled = false;
+                button_payment_Id.Visible = false;
+                button_payment_Id.Enabled = false;
+                button_payment_date.Visible = false;
+                button_payment_date.Enabled = false;
+                button_payment_studentId.Visible = false;
+                button_payment_studentId.Enabled = false;
+                textBox_payment_studentId.Visible = false;
+                textBox_payment_studentId.Enabled = false;
+                label4.Enabled = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label5.Enabled = false;
+                label6.Enabled = false;
+                label6.Visible = false;
             }
         }
 
@@ -148,12 +220,119 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             connection.Open();
             if (int.TryParse(textBox_number_room.Text, out int number) == true)
             {
-                SqlCommand command = new SqlCommand($"SELECT * FROM Room WHERE Room_number = @textBox_number_room",connection);
+                SqlCommand command = new SqlCommand("SELECT * FROM Room WHERE Room_number = @textBox_number_room",connection);
                 command.Parameters.AddWithValue("@textBox_number_room", Convert.ToInt32(textBox_number_room.Text));
                 var reader = command.ExecuteReader();
                 DataTable dr = new DataTable();
                 dr.Load(reader);
                 dataGridView1.DataSource = dr;
+                textBox_number_room.Text = "";
+            }
+            connection.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            if (int.TryParse(textBox_Floor_number.Text, out int number) == true)
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM Room WHERE Floor_number = @textBox_Floor_number", connection);
+                command.Parameters.AddWithValue("@textBox_Floor_number", Convert.ToInt32(textBox_Floor_number.Text));
+                var reader = command.ExecuteReader();
+                DataTable dr = new DataTable();
+                dr.Load(reader);
+                dataGridView1.DataSource = dr;
+                textBox_Floor_number.Text = "";
+            }
+            connection.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string type_room = "";
+            if (checkBox_Male.Checked == true && checkBox_Female.Checked == false)
+            {
+                type_room = "Чоловіча";
+                SqlCommand command = new SqlCommand("SELECT * FROM Room WHERE Room_type = @type_room", connection);
+                command.Parameters.AddWithValue("@type_room", type_room);
+                var reader = command.ExecuteReader();
+                DataTable dr = new DataTable();
+                dr.Load(reader);
+                dataGridView1.DataSource = dr;
+            }
+            else if (checkBox_Male.Checked == false && checkBox_Female.Checked == true)
+            {
+                type_room = "Жіноча";
+                SqlCommand command = new SqlCommand("SELECT * FROM Room WHERE Room_type = @type_room", connection);
+                command.Parameters.AddWithValue("@type_room", type_room);
+                var reader = command.ExecuteReader();
+                DataTable dr = new DataTable();
+                dr.Load(reader);
+                dataGridView1.DataSource = dr;
+            }
+            else if (checkBox_Male.Checked == true && checkBox_Female.Checked == true)
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM Room", connection);
+                var reader = command.ExecuteReader();
+                DataTable dr = new DataTable();
+                dr.Load(reader);
+                dataGridView1.DataSource = dr;
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Помилка",
+                    "Оберіть тип кімнати",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly);
+            }
+            connection.Close();
+        }
+
+        private void button_payment_Id_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            if (int.TryParse(textBox_payment_id.Text, out int number) == true)
+            {
+                SqlCommand command = new SqlCommand($"SELECT * FROM Payment WHERE Operation_id = @textBox_payment_id", connection);
+                command.Parameters.AddWithValue("@textBox_payment_id", Convert.ToInt32(textBox_payment_id.Text));
+                var reader = command.ExecuteReader();
+                DataTable dr = new DataTable();
+                dr.Load(reader);
+                dataGridView1.DataSource = dr;
+                textBox_payment_id.Text = "";
+            }
+            connection.Close();
+        }
+
+        private void button_payment_date_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand("Select * FROM Payment WHERE Payment_date = @textBox_payment_date", connection);
+                command.Parameters.AddWithValue("@textBox_payment_date", textBox_payment_date.Text);
+                var reader = command.ExecuteReader();
+                DataTable dr = new DataTable();
+                dr.Load(reader);
+                dataGridView1.DataSource = dr;
+                textBox_payment_date.Text = "";
+            connection.Close();
+        }
+
+        private void button_payment_studentId_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            if (int.TryParse(textBox_payment_studentId.Text, out int number) == true)
+            {
+                SqlCommand command = new SqlCommand($"SELECT * FROM Payment WHERE IdCodeStudent = @textBox_payment_studentId", connection);
+                command.Parameters.AddWithValue("@textBox_payment_studentId", Convert.ToInt32(textBox_payment_studentId.Text));
+                var reader = command.ExecuteReader();
+                DataTable dr = new DataTable();
+                dr.Load(reader);
+                dataGridView1.DataSource = dr;
+                textBox_payment_studentId.Text = "";
             }
             connection.Close();
         }

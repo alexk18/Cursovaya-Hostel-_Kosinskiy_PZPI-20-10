@@ -56,6 +56,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                     MessageBoxDefaultButton.Button1,
                     MessageBoxOptions.DefaultDesktopOnly);
                 this.Close();
+                Cheking.Checked = true;
             }
             else
             {

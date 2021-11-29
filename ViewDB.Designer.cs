@@ -59,9 +59,20 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_Floor_number = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.checkBox_Male = new System.Windows.Forms.CheckBox();
+            this.checkBox_Female = new System.Windows.Forms.CheckBox();
+            this.button_payment_Id = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_payment_id = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_payment_date = new System.Windows.Forms.TextBox();
+            this.button_payment_date = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox_payment_studentId = new System.Windows.Forms.TextBox();
+            this.button_payment_studentId = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
@@ -244,23 +255,28 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // 
             // textBox_number_room
             // 
+            this.textBox_number_room.Enabled = false;
             this.textBox_number_room.Location = new System.Drawing.Point(13, 95);
             this.textBox_number_room.Name = "textBox_number_room";
             this.textBox_number_room.Size = new System.Drawing.Size(281, 20);
             this.textBox_number_room.TabIndex = 8;
+            this.textBox_number_room.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Location = new System.Drawing.Point(13, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Введіть номер кімнати:";
+            this.label2.Visible = false;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button2.Enabled = false;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(47, 263);
@@ -269,10 +285,13 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button2.TabIndex = 10;
             this.button2.Text = "Отримати інформацію за поверхом";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button3.Enabled = false;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(47, 137);
@@ -281,27 +300,33 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button3.TabIndex = 11;
             this.button3.Text = "Пошук кімнати";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox2
+            // textBox_Floor_number
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 221);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 20);
-            this.textBox2.TabIndex = 12;
+            this.textBox_Floor_number.Enabled = false;
+            this.textBox_Floor_number.Location = new System.Drawing.Point(13, 221);
+            this.textBox_Floor_number.Name = "textBox_Floor_number";
+            this.textBox_Floor_number.Size = new System.Drawing.Size(281, 20);
+            this.textBox_Floor_number.TabIndex = 12;
+            this.textBox_Floor_number.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Enabled = false;
             this.label3.Location = new System.Drawing.Point(13, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "Введіть поверх";
+            this.label3.Visible = false;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button4.Enabled = false;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(47, 375);
@@ -310,6 +335,137 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button4.TabIndex = 14;
             this.button4.Text = "Пошук вільних кімнат";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // checkBox_Male
+            // 
+            this.checkBox_Male.AutoSize = true;
+            this.checkBox_Male.Enabled = false;
+            this.checkBox_Male.Location = new System.Drawing.Point(47, 330);
+            this.checkBox_Male.Name = "checkBox_Male";
+            this.checkBox_Male.Size = new System.Drawing.Size(67, 17);
+            this.checkBox_Male.TabIndex = 15;
+            this.checkBox_Male.Text = "Чоловічі";
+            this.checkBox_Male.UseVisualStyleBackColor = true;
+            this.checkBox_Male.Visible = false;
+            // 
+            // checkBox_Female
+            // 
+            this.checkBox_Female.AutoSize = true;
+            this.checkBox_Female.Enabled = false;
+            this.checkBox_Female.Location = new System.Drawing.Point(202, 330);
+            this.checkBox_Female.Name = "checkBox_Female";
+            this.checkBox_Female.Size = new System.Drawing.Size(58, 17);
+            this.checkBox_Female.TabIndex = 16;
+            this.checkBox_Female.Text = "Жіночі";
+            this.checkBox_Female.UseVisualStyleBackColor = true;
+            this.checkBox_Female.Visible = false;
+            // 
+            // button_payment_Id
+            // 
+            this.button_payment_Id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_payment_Id.Enabled = false;
+            this.button_payment_Id.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_payment_Id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_payment_Id.Location = new System.Drawing.Point(46, 137);
+            this.button_payment_Id.Name = "button_payment_Id";
+            this.button_payment_Id.Size = new System.Drawing.Size(214, 34);
+            this.button_payment_Id.TabIndex = 19;
+            this.button_payment_Id.Text = "Пошук за айді";
+            this.button_payment_Id.UseVisualStyleBackColor = false;
+            this.button_payment_Id.Visible = false;
+            this.button_payment_Id.Click += new System.EventHandler(this.button_payment_Id_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.Location = new System.Drawing.Point(13, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Введіть айді операції:";
+            this.label4.Visible = false;
+            // 
+            // textBox_payment_id
+            // 
+            this.textBox_payment_id.Enabled = false;
+            this.textBox_payment_id.Location = new System.Drawing.Point(12, 95);
+            this.textBox_payment_id.Name = "textBox_payment_id";
+            this.textBox_payment_id.Size = new System.Drawing.Size(281, 20);
+            this.textBox_payment_id.TabIndex = 17;
+            this.textBox_payment_id.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Enabled = false;
+            this.label5.Location = new System.Drawing.Point(13, 193);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Введіть дату платежу";
+            this.label5.Visible = false;
+            // 
+            // textBox_payment_date
+            // 
+            this.textBox_payment_date.Enabled = false;
+            this.textBox_payment_date.Location = new System.Drawing.Point(13, 221);
+            this.textBox_payment_date.Name = "textBox_payment_date";
+            this.textBox_payment_date.Size = new System.Drawing.Size(281, 20);
+            this.textBox_payment_date.TabIndex = 21;
+            this.textBox_payment_date.Visible = false;
+            // 
+            // button_payment_date
+            // 
+            this.button_payment_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_payment_date.Enabled = false;
+            this.button_payment_date.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_payment_date.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_payment_date.Location = new System.Drawing.Point(47, 263);
+            this.button_payment_date.Name = "button_payment_date";
+            this.button_payment_date.Size = new System.Drawing.Size(214, 38);
+            this.button_payment_date.TabIndex = 20;
+            this.button_payment_date.Text = "Шукати за датою";
+            this.button_payment_date.UseVisualStyleBackColor = false;
+            this.button_payment_date.Visible = false;
+            this.button_payment_date.Click += new System.EventHandler(this.button_payment_date_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Enabled = false;
+            this.label6.Location = new System.Drawing.Point(9, 330);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 13);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Введіть айді студенту";
+            this.label6.Visible = false;
+            // 
+            // textBox_payment_studentId
+            // 
+            this.textBox_payment_studentId.Enabled = false;
+            this.textBox_payment_studentId.Location = new System.Drawing.Point(12, 353);
+            this.textBox_payment_studentId.Name = "textBox_payment_studentId";
+            this.textBox_payment_studentId.Size = new System.Drawing.Size(281, 20);
+            this.textBox_payment_studentId.TabIndex = 27;
+            this.textBox_payment_studentId.Visible = false;
+            // 
+            // button_payment_studentId
+            // 
+            this.button_payment_studentId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_payment_studentId.Enabled = false;
+            this.button_payment_studentId.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_payment_studentId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_payment_studentId.Location = new System.Drawing.Point(47, 410);
+            this.button_payment_studentId.Name = "button_payment_studentId";
+            this.button_payment_studentId.Size = new System.Drawing.Size(214, 38);
+            this.button_payment_studentId.TabIndex = 26;
+            this.button_payment_studentId.Text = "Шукати за айді студенту";
+            this.button_payment_studentId.UseVisualStyleBackColor = false;
+            this.button_payment_studentId.Visible = false;
+            this.button_payment_studentId.Click += new System.EventHandler(this.button_payment_studentId_Click);
             // 
             // ViewDB
             // 
@@ -317,13 +473,15 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1171, 557);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox_number_room);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox_payment_studentId);
+            this.Controls.Add(this.button_payment_studentId);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox_payment_date);
+            this.Controls.Add(this.button_payment_date);
+            this.Controls.Add(this.button_payment_Id);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox_payment_id);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox_Payment);
@@ -332,6 +490,15 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Controls.Add(this.checkBox_Resident);
             this.Controls.Add(this.checkBox_Room);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.checkBox_Female);
+            this.Controls.Add(this.checkBox_Male);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox_Floor_number);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox_number_room);
             this.Name = "ViewDB";
             this.Text = "Перегляд бази даних";
             this.Load += new System.EventHandler(this.ViewDB_Load);
@@ -384,8 +551,19 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_Floor_number;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox checkBox_Male;
+        private System.Windows.Forms.CheckBox checkBox_Female;
+        private System.Windows.Forms.Button button_payment_Id;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox_payment_id;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_payment_date;
+        private System.Windows.Forms.Button button_payment_date;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_payment_studentId;
+        private System.Windows.Forms.Button button_payment_studentId;
     }
 }

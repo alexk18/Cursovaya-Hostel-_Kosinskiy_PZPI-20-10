@@ -60,6 +60,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1,
                 MessageBoxOptions.DefaultDesktopOnly);
+            Cheking.Checked = false;
         }
 
         private void pictureBox_Dovidka_Click(object sender, EventArgs e)

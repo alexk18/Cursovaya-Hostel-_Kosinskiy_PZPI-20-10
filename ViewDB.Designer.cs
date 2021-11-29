@@ -73,6 +73,33 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_payment_studentId = new System.Windows.Forms.TextBox();
             this.button_payment_studentId = new System.Windows.Forms.Button();
+            this.label_ElID = new System.Windows.Forms.Label();
+            this.textBox_ElID = new System.Windows.Forms.TextBox();
+            this.button_ELID = new System.Windows.Forms.Button();
+            this.label_ElPower = new System.Windows.Forms.Label();
+            this.textBox_ElPower = new System.Windows.Forms.TextBox();
+            this.button_ELPower = new System.Windows.Forms.Button();
+            this.label_ELSTID = new System.Windows.Forms.Label();
+            this.textBox_ELSTID = new System.Windows.Forms.TextBox();
+            this.button_ELSTID = new System.Windows.Forms.Button();
+            this.label_InnventCode = new System.Windows.Forms.Label();
+            this.textBox_InnventCode = new System.Windows.Forms.TextBox();
+            this.button_InnventCode = new System.Windows.Forms.Button();
+            this.label_InvCondition = new System.Windows.Forms.Label();
+            this.textBox_InvCondition = new System.Windows.Forms.TextBox();
+            this.button_InvCondition = new System.Windows.Forms.Button();
+            this.label_InventRoom = new System.Windows.Forms.Label();
+            this.textBox_InventRoom = new System.Windows.Forms.TextBox();
+            this.button_InventRoom = new System.Windows.Forms.Button();
+            this.label_StudentID = new System.Windows.Forms.Label();
+            this.textBox_StudentID = new System.Windows.Forms.TextBox();
+            this.button_StudentID = new System.Windows.Forms.Button();
+            this.label_StudentGroup = new System.Windows.Forms.Label();
+            this.textBox_StudentGroup = new System.Windows.Forms.TextBox();
+            this.button_StudentGroup = new System.Windows.Forms.Button();
+            this.label_StudentBirth = new System.Windows.Forms.Label();
+            this.textBox_StudentBirth = new System.Windows.Forms.TextBox();
+            this.button_StudentBirth = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
@@ -96,9 +123,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(859, 401);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // checkBox_Room
             // 
@@ -329,7 +357,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button4.Enabled = false;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(47, 375);
+            this.button4.Location = new System.Drawing.Point(47, 410);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(214, 38);
             this.button4.TabIndex = 14;
@@ -467,21 +495,365 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_payment_studentId.Visible = false;
             this.button_payment_studentId.Click += new System.EventHandler(this.button_payment_studentId_Click);
             // 
+            // label_ElID
+            // 
+            this.label_ElID.AutoSize = true;
+            this.label_ElID.Enabled = false;
+            this.label_ElID.Location = new System.Drawing.Point(13, 76);
+            this.label_ElID.Name = "label_ElID";
+            this.label_ElID.Size = new System.Drawing.Size(166, 13);
+            this.label_ElID.TabIndex = 31;
+            this.label_ElID.Text = "Введіть идентифікатор девайсу";
+            this.label_ElID.Visible = false;
+            // 
+            // textBox_ElID
+            // 
+            this.textBox_ElID.Enabled = false;
+            this.textBox_ElID.Location = new System.Drawing.Point(12, 95);
+            this.textBox_ElID.Name = "textBox_ElID";
+            this.textBox_ElID.Size = new System.Drawing.Size(281, 20);
+            this.textBox_ElID.TabIndex = 30;
+            this.textBox_ElID.Visible = false;
+            // 
+            // button_ELID
+            // 
+            this.button_ELID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_ELID.Enabled = false;
+            this.button_ELID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_ELID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ELID.Location = new System.Drawing.Point(47, 135);
+            this.button_ELID.Name = "button_ELID";
+            this.button_ELID.Size = new System.Drawing.Size(214, 38);
+            this.button_ELID.TabIndex = 29;
+            this.button_ELID.Text = "Шукати за ідентифікатору";
+            this.button_ELID.UseVisualStyleBackColor = false;
+            this.button_ELID.Visible = false;
+            this.button_ELID.Click += new System.EventHandler(this.button_ELID_Click);
+            // 
+            // label_ElPower
+            // 
+            this.label_ElPower.AutoSize = true;
+            this.label_ElPower.Enabled = false;
+            this.label_ElPower.Location = new System.Drawing.Point(13, 193);
+            this.label_ElPower.Name = "label_ElPower";
+            this.label_ElPower.Size = new System.Drawing.Size(147, 13);
+            this.label_ElPower.TabIndex = 34;
+            this.label_ElPower.Text = "Введіть потужність девайсу";
+            this.label_ElPower.Visible = false;
+            // 
+            // textBox_ElPower
+            // 
+            this.textBox_ElPower.Enabled = false;
+            this.textBox_ElPower.Location = new System.Drawing.Point(13, 221);
+            this.textBox_ElPower.Name = "textBox_ElPower";
+            this.textBox_ElPower.Size = new System.Drawing.Size(281, 20);
+            this.textBox_ElPower.TabIndex = 33;
+            this.textBox_ElPower.Visible = false;
+            // 
+            // button_ELPower
+            // 
+            this.button_ELPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_ELPower.Enabled = false;
+            this.button_ELPower.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_ELPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ELPower.Location = new System.Drawing.Point(47, 263);
+            this.button_ELPower.Name = "button_ELPower";
+            this.button_ELPower.Size = new System.Drawing.Size(214, 38);
+            this.button_ELPower.TabIndex = 32;
+            this.button_ELPower.Text = "Шукати за потужністю";
+            this.button_ELPower.UseVisualStyleBackColor = false;
+            this.button_ELPower.Visible = false;
+            this.button_ELPower.Click += new System.EventHandler(this.button_ELPower_Click);
+            // 
+            // label_ELSTID
+            // 
+            this.label_ELSTID.AutoSize = true;
+            this.label_ELSTID.Enabled = false;
+            this.label_ELSTID.Location = new System.Drawing.Point(10, 331);
+            this.label_ELSTID.Name = "label_ELSTID";
+            this.label_ELSTID.Size = new System.Drawing.Size(165, 13);
+            this.label_ELSTID.TabIndex = 37;
+            this.label_ELSTID.Text = "Введіть ідентифікатор студенту";
+            this.label_ELSTID.Visible = false;
+            this.label_ELSTID.Click += new System.EventHandler(this.label_ELSTID_Click);
+            // 
+            // textBox_ELSTID
+            // 
+            this.textBox_ELSTID.Enabled = false;
+            this.textBox_ELSTID.Location = new System.Drawing.Point(12, 353);
+            this.textBox_ELSTID.Name = "textBox_ELSTID";
+            this.textBox_ELSTID.Size = new System.Drawing.Size(281, 20);
+            this.textBox_ELSTID.TabIndex = 36;
+            this.textBox_ELSTID.Visible = false;
+            // 
+            // button_ELSTID
+            // 
+            this.button_ELSTID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_ELSTID.Enabled = false;
+            this.button_ELSTID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_ELSTID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ELSTID.Location = new System.Drawing.Point(47, 410);
+            this.button_ELSTID.Name = "button_ELSTID";
+            this.button_ELSTID.Size = new System.Drawing.Size(214, 38);
+            this.button_ELSTID.TabIndex = 35;
+            this.button_ELSTID.Text = "Шукати за студентом";
+            this.button_ELSTID.UseVisualStyleBackColor = false;
+            this.button_ELSTID.Visible = false;
+            this.button_ELSTID.Click += new System.EventHandler(this.button_ELSTID_Click);
+            // 
+            // label_InnventCode
+            // 
+            this.label_InnventCode.AutoSize = true;
+            this.label_InnventCode.Enabled = false;
+            this.label_InnventCode.Location = new System.Drawing.Point(16, 76);
+            this.label_InnventCode.Name = "label_InnventCode";
+            this.label_InnventCode.Size = new System.Drawing.Size(159, 13);
+            this.label_InnventCode.TabIndex = 40;
+            this.label_InnventCode.Text = "Введіть идентифікатор мебелі";
+            this.label_InnventCode.Visible = false;
+            this.label_InnventCode.Click += new System.EventHandler(this.label_InnventCode_Click);
+            // 
+            // textBox_InnventCode
+            // 
+            this.textBox_InnventCode.Enabled = false;
+            this.textBox_InnventCode.Location = new System.Drawing.Point(12, 95);
+            this.textBox_InnventCode.Name = "textBox_InnventCode";
+            this.textBox_InnventCode.Size = new System.Drawing.Size(281, 20);
+            this.textBox_InnventCode.TabIndex = 39;
+            this.textBox_InnventCode.Visible = false;
+            this.textBox_InnventCode.TextChanged += new System.EventHandler(this.textBox_InnventCode_TextChanged);
+            // 
+            // button_InnventCode
+            // 
+            this.button_InnventCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_InnventCode.Enabled = false;
+            this.button_InnventCode.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_InnventCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_InnventCode.Location = new System.Drawing.Point(47, 135);
+            this.button_InnventCode.Name = "button_InnventCode";
+            this.button_InnventCode.Size = new System.Drawing.Size(214, 38);
+            this.button_InnventCode.TabIndex = 38;
+            this.button_InnventCode.Text = "Шукати за ідентифікатором";
+            this.button_InnventCode.UseVisualStyleBackColor = false;
+            this.button_InnventCode.Visible = false;
+            this.button_InnventCode.Click += new System.EventHandler(this.button_InnventCode_Click);
+            // 
+            // label_InvCondition
+            // 
+            this.label_InvCondition.AutoSize = true;
+            this.label_InvCondition.Enabled = false;
+            this.label_InvCondition.Location = new System.Drawing.Point(13, 193);
+            this.label_InvCondition.Name = "label_InvCondition";
+            this.label_InvCondition.Size = new System.Drawing.Size(108, 13);
+            this.label_InvCondition.TabIndex = 43;
+            this.label_InvCondition.Text = "Введіть стан мебелі";
+            this.label_InvCondition.Visible = false;
+            // 
+            // textBox_InvCondition
+            // 
+            this.textBox_InvCondition.Enabled = false;
+            this.textBox_InvCondition.Location = new System.Drawing.Point(13, 221);
+            this.textBox_InvCondition.Name = "textBox_InvCondition";
+            this.textBox_InvCondition.Size = new System.Drawing.Size(281, 20);
+            this.textBox_InvCondition.TabIndex = 42;
+            this.textBox_InvCondition.Visible = false;
+            // 
+            // button_InvCondition
+            // 
+            this.button_InvCondition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_InvCondition.Enabled = false;
+            this.button_InvCondition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_InvCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_InvCondition.Location = new System.Drawing.Point(47, 263);
+            this.button_InvCondition.Name = "button_InvCondition";
+            this.button_InvCondition.Size = new System.Drawing.Size(214, 38);
+            this.button_InvCondition.TabIndex = 41;
+            this.button_InvCondition.Text = "Шукати за станом";
+            this.button_InvCondition.UseVisualStyleBackColor = false;
+            this.button_InvCondition.Visible = false;
+            this.button_InvCondition.Click += new System.EventHandler(this.button_InvCondition_Click);
+            // 
+            // label_InventRoom
+            // 
+            this.label_InventRoom.AutoSize = true;
+            this.label_InventRoom.Enabled = false;
+            this.label_InventRoom.Location = new System.Drawing.Point(10, 331);
+            this.label_InventRoom.Name = "label_InventRoom";
+            this.label_InventRoom.Size = new System.Drawing.Size(122, 13);
+            this.label_InventRoom.TabIndex = 46;
+            this.label_InventRoom.Text = "Введіть номер кімнати";
+            this.label_InventRoom.Visible = false;
+            // 
+            // textBox_InventRoom
+            // 
+            this.textBox_InventRoom.Enabled = false;
+            this.textBox_InventRoom.Location = new System.Drawing.Point(12, 353);
+            this.textBox_InventRoom.Name = "textBox_InventRoom";
+            this.textBox_InventRoom.Size = new System.Drawing.Size(281, 20);
+            this.textBox_InventRoom.TabIndex = 45;
+            this.textBox_InventRoom.Visible = false;
+            // 
+            // button_InventRoom
+            // 
+            this.button_InventRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_InventRoom.Enabled = false;
+            this.button_InventRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_InventRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_InventRoom.Location = new System.Drawing.Point(47, 410);
+            this.button_InventRoom.Name = "button_InventRoom";
+            this.button_InventRoom.Size = new System.Drawing.Size(214, 38);
+            this.button_InventRoom.TabIndex = 44;
+            this.button_InventRoom.Text = "Шукати за кімнатою";
+            this.button_InventRoom.UseVisualStyleBackColor = false;
+            this.button_InventRoom.Visible = false;
+            this.button_InventRoom.Click += new System.EventHandler(this.button_InventRoom_Click);
+            // 
+            // label_StudentID
+            // 
+            this.label_StudentID.AutoSize = true;
+            this.label_StudentID.Enabled = false;
+            this.label_StudentID.Location = new System.Drawing.Point(16, 76);
+            this.label_StudentID.Name = "label_StudentID";
+            this.label_StudentID.Size = new System.Drawing.Size(169, 13);
+            this.label_StudentID.TabIndex = 49;
+            this.label_StudentID.Text = "Введіть идентифікатор студенту";
+            this.label_StudentID.Visible = false;
+            // 
+            // textBox_StudentID
+            // 
+            this.textBox_StudentID.Enabled = false;
+            this.textBox_StudentID.Location = new System.Drawing.Point(12, 95);
+            this.textBox_StudentID.Name = "textBox_StudentID";
+            this.textBox_StudentID.Size = new System.Drawing.Size(281, 20);
+            this.textBox_StudentID.TabIndex = 48;
+            this.textBox_StudentID.Visible = false;
+            // 
+            // button_StudentID
+            // 
+            this.button_StudentID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_StudentID.Enabled = false;
+            this.button_StudentID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_StudentID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_StudentID.Location = new System.Drawing.Point(47, 135);
+            this.button_StudentID.Name = "button_StudentID";
+            this.button_StudentID.Size = new System.Drawing.Size(214, 38);
+            this.button_StudentID.TabIndex = 47;
+            this.button_StudentID.Text = "Шукати за ідентифікатором";
+            this.button_StudentID.UseVisualStyleBackColor = false;
+            this.button_StudentID.Visible = false;
+            this.button_StudentID.Click += new System.EventHandler(this.button_StudentID_Click);
+            // 
+            // label_StudentGroup
+            // 
+            this.label_StudentGroup.AutoSize = true;
+            this.label_StudentGroup.Enabled = false;
+            this.label_StudentGroup.Location = new System.Drawing.Point(13, 193);
+            this.label_StudentGroup.Name = "label_StudentGroup";
+            this.label_StudentGroup.Size = new System.Drawing.Size(123, 13);
+            this.label_StudentGroup.TabIndex = 52;
+            this.label_StudentGroup.Text = "Введіть бажаєму групу";
+            this.label_StudentGroup.Visible = false;
+            this.label_StudentGroup.Click += new System.EventHandler(this.label_StudentGroup_Click);
+            // 
+            // textBox_StudentGroup
+            // 
+            this.textBox_StudentGroup.Enabled = false;
+            this.textBox_StudentGroup.Location = new System.Drawing.Point(13, 221);
+            this.textBox_StudentGroup.Name = "textBox_StudentGroup";
+            this.textBox_StudentGroup.Size = new System.Drawing.Size(281, 20);
+            this.textBox_StudentGroup.TabIndex = 51;
+            this.textBox_StudentGroup.Visible = false;
+            this.textBox_StudentGroup.TextChanged += new System.EventHandler(this.textBox_StudentGroup_TextChanged);
+            // 
+            // button_StudentGroup
+            // 
+            this.button_StudentGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_StudentGroup.Enabled = false;
+            this.button_StudentGroup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_StudentGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_StudentGroup.Location = new System.Drawing.Point(47, 263);
+            this.button_StudentGroup.Name = "button_StudentGroup";
+            this.button_StudentGroup.Size = new System.Drawing.Size(214, 38);
+            this.button_StudentGroup.TabIndex = 50;
+            this.button_StudentGroup.Text = "Шукати за групою";
+            this.button_StudentGroup.UseVisualStyleBackColor = false;
+            this.button_StudentGroup.Visible = false;
+            this.button_StudentGroup.Click += new System.EventHandler(this.button_StudentGroup_Click);
+            // 
+            // label_StudentBirth
+            // 
+            this.label_StudentBirth.AutoSize = true;
+            this.label_StudentBirth.Enabled = false;
+            this.label_StudentBirth.Location = new System.Drawing.Point(11, 331);
+            this.label_StudentBirth.Name = "label_StudentBirth";
+            this.label_StudentBirth.Size = new System.Drawing.Size(190, 13);
+            this.label_StudentBirth.TabIndex = 55;
+            this.label_StudentBirth.Text = "Введіть дату народження мешканця";
+            this.label_StudentBirth.Visible = false;
+            // 
+            // textBox_StudentBirth
+            // 
+            this.textBox_StudentBirth.Enabled = false;
+            this.textBox_StudentBirth.Location = new System.Drawing.Point(13, 353);
+            this.textBox_StudentBirth.Name = "textBox_StudentBirth";
+            this.textBox_StudentBirth.Size = new System.Drawing.Size(281, 20);
+            this.textBox_StudentBirth.TabIndex = 54;
+            this.textBox_StudentBirth.Visible = false;
+            // 
+            // button_StudentBirth
+            // 
+            this.button_StudentBirth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_StudentBirth.Enabled = false;
+            this.button_StudentBirth.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_StudentBirth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_StudentBirth.Location = new System.Drawing.Point(48, 410);
+            this.button_StudentBirth.Name = "button_StudentBirth";
+            this.button_StudentBirth.Size = new System.Drawing.Size(214, 38);
+            this.button_StudentBirth.TabIndex = 53;
+            this.button_StudentBirth.Text = "Шукати за датою народження";
+            this.button_StudentBirth.UseVisualStyleBackColor = false;
+            this.button_StudentBirth.Visible = false;
+            this.button_StudentBirth.Click += new System.EventHandler(this.button_StudentBirth_Click);
+            // 
             // ViewDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1171, 557);
+            this.Controls.Add(this.label_StudentBirth);
+            this.Controls.Add(this.textBox_StudentBirth);
+            this.Controls.Add(this.button_StudentBirth);
+            this.Controls.Add(this.label_StudentGroup);
+            this.Controls.Add(this.textBox_StudentGroup);
+            this.Controls.Add(this.button_StudentGroup);
+            this.Controls.Add(this.label_StudentID);
+            this.Controls.Add(this.textBox_StudentID);
+            this.Controls.Add(this.button_StudentID);
+            this.Controls.Add(this.label_InventRoom);
+            this.Controls.Add(this.textBox_InventRoom);
+            this.Controls.Add(this.button_InventRoom);
+            this.Controls.Add(this.label_InvCondition);
+            this.Controls.Add(this.textBox_InvCondition);
+            this.Controls.Add(this.button_InvCondition);
+            this.Controls.Add(this.label_InnventCode);
+            this.Controls.Add(this.textBox_InnventCode);
+            this.Controls.Add(this.button_InnventCode);
+            this.Controls.Add(this.label_ELSTID);
+            this.Controls.Add(this.textBox_ELSTID);
+            this.Controls.Add(this.button_ELSTID);
+            this.Controls.Add(this.label_ElPower);
+            this.Controls.Add(this.textBox_ElPower);
+            this.Controls.Add(this.button_ELPower);
+            this.Controls.Add(this.label_ElID);
+            this.Controls.Add(this.textBox_ElID);
+            this.Controls.Add(this.button_ELID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox_payment_studentId);
             this.Controls.Add(this.button_payment_studentId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox_payment_date);
             this.Controls.Add(this.button_payment_date);
-            this.Controls.Add(this.button_payment_Id);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_payment_id);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox_Payment);
@@ -495,8 +867,11 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_Floor_number);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_payment_Id);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox_payment_id);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_number_room);
             this.Name = "ViewDB";
@@ -565,5 +940,32 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox_payment_studentId;
         private System.Windows.Forms.Button button_payment_studentId;
+        private System.Windows.Forms.Label label_ElID;
+        private System.Windows.Forms.TextBox textBox_ElID;
+        private System.Windows.Forms.Button button_ELID;
+        private System.Windows.Forms.Label label_ElPower;
+        private System.Windows.Forms.TextBox textBox_ElPower;
+        private System.Windows.Forms.Button button_ELPower;
+        private System.Windows.Forms.Label label_ELSTID;
+        private System.Windows.Forms.TextBox textBox_ELSTID;
+        private System.Windows.Forms.Button button_ELSTID;
+        private System.Windows.Forms.Label label_InnventCode;
+        private System.Windows.Forms.TextBox textBox_InnventCode;
+        private System.Windows.Forms.Button button_InnventCode;
+        private System.Windows.Forms.Label label_InvCondition;
+        private System.Windows.Forms.TextBox textBox_InvCondition;
+        private System.Windows.Forms.Button button_InvCondition;
+        private System.Windows.Forms.Label label_InventRoom;
+        private System.Windows.Forms.TextBox textBox_InventRoom;
+        private System.Windows.Forms.Button button_InventRoom;
+        private System.Windows.Forms.Label label_StudentID;
+        private System.Windows.Forms.TextBox textBox_StudentID;
+        private System.Windows.Forms.Button button_StudentID;
+        private System.Windows.Forms.Label label_StudentGroup;
+        private System.Windows.Forms.TextBox textBox_StudentGroup;
+        private System.Windows.Forms.Button button_StudentGroup;
+        private System.Windows.Forms.Label label_StudentBirth;
+        private System.Windows.Forms.TextBox textBox_StudentBirth;
+        private System.Windows.Forms.Button button_StudentBirth;
     }
 }

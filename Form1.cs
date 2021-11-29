@@ -74,5 +74,11 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             ViewDB ViewDb = new ViewDB();
             ViewDb.Show();
         }
+
+        private void button_Work_Click(object sender, EventArgs e)
+        {
+            WorkWithDB_Form Form = new WorkWithDB_Form();
+            Form.Show();
+        }
     }
 }

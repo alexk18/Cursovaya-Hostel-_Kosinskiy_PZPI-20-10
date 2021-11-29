@@ -181,6 +181,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddResident_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddResident_Form.Designer.cs">
+      <DependentUpon>AddResident_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRoom_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRoom_Form.Designer.cs">
+      <DependentUpon>AddRoom_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +227,18 @@
     <Compile Include="ViewDB.Designer.cs">
       <DependentUpon>ViewDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkWithDB_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkWithDB_Form.Designer.cs">
+      <DependentUpon>WorkWithDB_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddResident_Form.resx">
+      <DependentUpon>AddResident_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRoom_Form.resx">
+      <DependentUpon>AddRoom_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +260,9 @@
     </Compile>
     <EmbeddedResource Include="ViewDB.resx">
       <DependentUpon>ViewDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkWithDB_Form.resx">
+      <DependentUpon>WorkWithDB_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CursovayaHostelDataSet.xsc">
       <DependentUpon>CursovayaHostelDataSet.xsd</DependentUpon>

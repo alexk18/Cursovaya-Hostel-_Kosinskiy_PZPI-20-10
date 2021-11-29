@@ -124,6 +124,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_Work.Text = "Робота з системою";
             this.button_Work.UseVisualStyleBackColor = false;
             this.button_Work.Visible = false;
+            this.button_Work.Click += new System.EventHandler(this.button_Work_Click);
             // 
             // button_view
             // 

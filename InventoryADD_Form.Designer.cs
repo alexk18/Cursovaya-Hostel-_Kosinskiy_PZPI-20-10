@@ -37,13 +37,13 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.label_AddConditio = new System.Windows.Forms.Label();
             this.label_InventRoom = new System.Windows.Forms.Label();
             this.comboBox_InventRoom = new System.Windows.Forms.ComboBox();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cursovayaHostelDataSet = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSet();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTableAdapter = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSetTableAdapters.RoomTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button_ADDInventory
@@ -69,9 +69,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_ADDTypeFurniture
             // 
             this.label_ADDTypeFurniture.AutoSize = true;
+            this.label_ADDTypeFurniture.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_ADDTypeFurniture.Location = new System.Drawing.Point(35, 34);
             this.label_ADDTypeFurniture.Name = "label_ADDTypeFurniture";
-            this.label_ADDTypeFurniture.Size = new System.Drawing.Size(102, 13);
+            this.label_ADDTypeFurniture.Size = new System.Drawing.Size(126, 17);
             this.label_ADDTypeFurniture.TabIndex = 7;
             this.label_ADDTypeFurniture.Text = "Введіть тип мебелі";
             // 
@@ -94,18 +95,20 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_AddConditio
             // 
             this.label_AddConditio.AutoSize = true;
+            this.label_AddConditio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_AddConditio.Location = new System.Drawing.Point(35, 119);
             this.label_AddConditio.Name = "label_AddConditio";
-            this.label_AddConditio.Size = new System.Drawing.Size(109, 13);
+            this.label_AddConditio.Size = new System.Drawing.Size(134, 17);
             this.label_AddConditio.TabIndex = 10;
             this.label_AddConditio.Text = "Оберіть стан мебелі";
             // 
             // label_InventRoom
             // 
             this.label_InventRoom.AutoSize = true;
+            this.label_InventRoom.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_InventRoom.Location = new System.Drawing.Point(35, 214);
             this.label_InventRoom.Name = "label_InventRoom";
-            this.label_InventRoom.Size = new System.Drawing.Size(123, 13);
+            this.label_InventRoom.Size = new System.Drawing.Size(155, 17);
             this.label_InventRoom.TabIndex = 12;
             this.label_InventRoom.Text = "Оберіть номер кімнати";
             // 
@@ -120,6 +123,11 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.comboBox_InventRoom.TabIndex = 11;
             this.comboBox_InventRoom.ValueMember = "Room_number";
             // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.bindingSource1;
+            // 
             // bindingSource1
             // 
             this.bindingSource1.DataSource = this.cursovayaHostelDataSet;
@@ -129,11 +137,6 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // 
             this.cursovayaHostelDataSet.DataSetName = "CursovayaHostelDataSet";
             this.cursovayaHostelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.bindingSource1;
             // 
             // roomTableAdapter
             // 
@@ -155,9 +158,9 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Name = "InventoryADD_Form";
             this.Text = "Додавання інвентарю";
             this.Load += new System.EventHandler(this.InventoryADD_Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

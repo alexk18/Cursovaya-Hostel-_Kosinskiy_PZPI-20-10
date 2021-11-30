@@ -76,9 +76,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_IDCodeStudent
             // 
             this.label_IDCodeStudent.AutoSize = true;
+            this.label_IDCodeStudent.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_IDCodeStudent.Location = new System.Drawing.Point(12, 29);
             this.label_IDCodeStudent.Name = "label_IDCodeStudent";
-            this.label_IDCodeStudent.Size = new System.Drawing.Size(114, 13);
+            this.label_IDCodeStudent.Size = new System.Drawing.Size(145, 17);
             this.label_IDCodeStudent.TabIndex = 4;
             this.label_IDCodeStudent.Text = "Ідентифікаційний код";
             // 
@@ -92,9 +93,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_FIO
             // 
             this.label_FIO.AutoSize = true;
+            this.label_FIO.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_FIO.Location = new System.Drawing.Point(12, 94);
             this.label_FIO.Name = "label_FIO";
-            this.label_FIO.Size = new System.Drawing.Size(25, 13);
+            this.label_FIO.Size = new System.Drawing.Size(30, 17);
             this.label_FIO.TabIndex = 6;
             this.label_FIO.Text = "ПІБ";
             // 
@@ -122,9 +124,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_Gender
             // 
             this.label_Gender.AutoSize = true;
+            this.label_Gender.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_Gender.Location = new System.Drawing.Point(401, 29);
             this.label_Gender.Name = "label_Gender";
-            this.label_Gender.Size = new System.Drawing.Size(36, 13);
+            this.label_Gender.Size = new System.Drawing.Size(42, 17);
             this.label_Gender.TabIndex = 10;
             this.label_Gender.Text = "Стать";
             // 
@@ -145,9 +148,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_Birthday
             // 
             this.label_Birthday.AutoSize = true;
+            this.label_Birthday.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_Birthday.Location = new System.Drawing.Point(15, 176);
             this.label_Birthday.Name = "label_Birthday";
-            this.label_Birthday.Size = new System.Drawing.Size(87, 13);
+            this.label_Birthday.Size = new System.Drawing.Size(109, 17);
             this.label_Birthday.TabIndex = 12;
             this.label_Birthday.Text = "Рік народження";
             // 
@@ -161,9 +165,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_Group
             // 
             this.label_Group.AutoSize = true;
+            this.label_Group.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_Group.Location = new System.Drawing.Point(15, 257);
             this.label_Group.Name = "label_Group";
-            this.label_Group.Size = new System.Drawing.Size(93, 13);
+            this.label_Group.Size = new System.Drawing.Size(115, 17);
             this.label_Group.TabIndex = 14;
             this.label_Group.Text = "Навчальна група";
             // 
@@ -197,15 +202,17 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_Course
             // 
             this.label_Course.AutoSize = true;
+            this.label_Course.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_Course.Location = new System.Drawing.Point(401, 257);
             this.label_Course.Name = "label_Course";
-            this.label_Course.Size = new System.Drawing.Size(31, 13);
+            this.label_Course.Size = new System.Drawing.Size(36, 17);
             this.label_Course.TabIndex = 16;
             this.label_Course.Text = "Курс";
             // 
             // dateTimePicker_ColonizeTime
             // 
-            this.dateTimePicker_ColonizeTime.CustomFormat = "yyyy-mm-dd";
+            this.dateTimePicker_ColonizeTime.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker_ColonizeTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_ColonizeTime.Location = new System.Drawing.Point(199, 205);
             this.dateTimePicker_ColonizeTime.Name = "dateTimePicker_ColonizeTime";
             this.dateTimePicker_ColonizeTime.Size = new System.Drawing.Size(200, 20);
@@ -215,18 +222,20 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_ColonizeTime
             // 
             this.label_ColonizeTime.AutoSize = true;
+            this.label_ColonizeTime.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_ColonizeTime.Location = new System.Drawing.Point(196, 176);
             this.label_ColonizeTime.Name = "label_ColonizeTime";
-            this.label_ColonizeTime.Size = new System.Drawing.Size(90, 13);
+            this.label_ColonizeTime.Size = new System.Drawing.Size(104, 17);
             this.label_ColonizeTime.TabIndex = 19;
             this.label_ColonizeTime.Text = "Дата заселення";
             // 
             // label_PhoneNumber
             // 
             this.label_PhoneNumber.AutoSize = true;
+            this.label_PhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_PhoneNumber.Location = new System.Drawing.Point(12, 337);
             this.label_PhoneNumber.Name = "label_PhoneNumber";
-            this.label_PhoneNumber.Size = new System.Drawing.Size(92, 13);
+            this.label_PhoneNumber.Size = new System.Drawing.Size(114, 17);
             this.label_PhoneNumber.TabIndex = 20;
             this.label_PhoneNumber.Text = "Номер телефону";
             // 
@@ -240,9 +249,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_STRoomNumber
             // 
             this.label_STRoomNumber.AutoSize = true;
+            this.label_STRoomNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_STRoomNumber.Location = new System.Drawing.Point(404, 337);
             this.label_STRoomNumber.Name = "label_STRoomNumber";
-            this.label_STRoomNumber.Size = new System.Drawing.Size(83, 13);
+            this.label_STRoomNumber.Size = new System.Drawing.Size(104, 17);
             this.label_STRoomNumber.TabIndex = 22;
             this.label_STRoomNumber.Text = "Номер кімнати";
             // 

@@ -63,15 +63,32 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                     MessageBoxOptions.DefaultDesktopOnly);
             }
             else
-            { 
-                //connection.Open();
-                //SqlCommand command = new SqlCommand($"INSERT INTO Resident VALUES({Convert.ToInt32(textBox_IDCodeStudent.Text)},'{textBox_ResidentName.Text}','{textBox_ResidentSurname.Text}',"+
-                //                                    $"'{textBox_ResidentMidleName.Text}',{Convert.ToInt32(textBox_Birthday.Text)}," +
-                //                                    $"'{textBox_Birthday.Text}','{comboBox_Gender.Text}','{dateTimePicker_ColonizeTime.Value.ToString()}','{textBox_Group.Text}',{Convert.ToInt32(comboBox_Course.Text)}," +
-                //                                    $"'{textBox_PhoneNumber}',{Convert.ToInt32(comboBox1.Text)}", connection);
-                //command.ExecuteReader();
-                //connection.Close();
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"INSERT INTO Resident VALUES({Convert.ToInt32(textBox_IDCodeStudent.Text)},'{textBox_ResidentName.Text}','{textBox_ResidentSurname.Text}'," +
+                                                    $"'{textBox_ResidentMidleName.Text}',{Convert.ToInt32(textBox_Birthday.Text)}," +
+                                                    $"'{comboBox_Gender.Text}','{dateTimePicker_ColonizeTime.Text/*.Value.ToString()*/}','{textBox_Group.Text}',{Convert.ToInt32(comboBox_Course.Text)}," +
+                                                    $"'{textBox_PhoneNumber.Text}',{Convert.ToInt32(comboBox1.Text)})", connection);
+                command.ExecuteReader();
+                connection.Close();
+                int numberRoom = Convert.ToInt32(comboBox1.Text);
+                connection.Open();
+                SqlCommand command3 = new SqlCommand($"SELECT Occupancy FROM Room WHERE Room_number = {numberRoom}", connection);
+                var count = Convert.ToInt32(command3.ExecuteScalar());
+                connection.Close();
+                connection.Open();
+                SqlCommand command2 = new SqlCommand($"UPDATE Room SET Occupancy = {count++} WHERE Room_number = {numberRoom}", connection);
+                command2.ExecuteReader();
+                connection.Close();
+                MessageBox.Show(
+                    "Ви додали мешканця",
+                    "Операція успішна",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly);
             }
         }
+        
     }
 }

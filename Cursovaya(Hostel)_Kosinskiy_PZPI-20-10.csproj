@@ -181,6 +181,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddElDevice_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddElDevice_Form.Designer.cs">
+      <DependentUpon>AddElDevice_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddResident_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     <Compile Include="WorkWithDB_Form.Designer.cs">
       <DependentUpon>WorkWithDB_Form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddElDevice_Form.resx">
+      <DependentUpon>AddElDevice_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddResident_Form.resx">
       <DependentUpon>AddResident_Form.cs</DependentUpon>
     </EmbeddedResource>

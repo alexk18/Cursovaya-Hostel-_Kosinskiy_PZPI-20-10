@@ -25,7 +25,14 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
 
         private void button3_Click(object sender, EventArgs e)
         {
+            InventoryADD_Form Form = new InventoryADD_Form();
+            Form.Show();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddResident_Form form = new AddResident_Form();
+            form.Show();
         }
     }
 }

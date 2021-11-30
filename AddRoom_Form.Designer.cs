@@ -40,14 +40,14 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.textBox__AddRoomCost = new System.Windows.Forms.TextBox();
             this.label__AddRoomHostle = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.hostelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cursovayaHostelDataSet = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSet();
-            this.hostelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.hostelTableAdapter = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSetTableAdapters.HostelTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.hostelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hostelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_AddRoomNumber
@@ -60,18 +60,20 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label_AddRoomNumber
             // 
             this.label_AddRoomNumber.AutoSize = true;
+            this.label_AddRoomNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_AddRoomNumber.Location = new System.Drawing.Point(34, 56);
             this.label_AddRoomNumber.Name = "label_AddRoomNumber";
-            this.label_AddRoomNumber.Size = new System.Drawing.Size(152, 13);
+            this.label_AddRoomNumber.Size = new System.Drawing.Size(190, 17);
             this.label_AddRoomNumber.TabIndex = 1;
             this.label_AddRoomNumber.Text = "Введіть номер нової кімнати";
             // 
             // label_AddRoomFloor
             // 
             this.label_AddRoomFloor.AutoSize = true;
+            this.label_AddRoomFloor.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_AddRoomFloor.Location = new System.Drawing.Point(34, 117);
             this.label_AddRoomFloor.Name = "label_AddRoomFloor";
-            this.label_AddRoomFloor.Size = new System.Drawing.Size(125, 13);
+            this.label_AddRoomFloor.Size = new System.Drawing.Size(156, 17);
             this.label_AddRoomFloor.TabIndex = 2;
             this.label_AddRoomFloor.Text = "Введіть поверх кімнати";
             // 
@@ -96,18 +98,20 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label__AddRoomType
             // 
             this.label__AddRoomType.AutoSize = true;
+            this.label__AddRoomType.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label__AddRoomType.Location = new System.Drawing.Point(34, 199);
             this.label__AddRoomType.Name = "label__AddRoomType";
-            this.label__AddRoomType.Size = new System.Drawing.Size(108, 13);
+            this.label__AddRoomType.Size = new System.Drawing.Size(136, 17);
             this.label__AddRoomType.TabIndex = 5;
             this.label__AddRoomType.Text = "Оберіть тип кімнати";
             // 
             // label__AddRoomCost
             // 
             this.label__AddRoomCost.AutoSize = true;
+            this.label__AddRoomCost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label__AddRoomCost.Location = new System.Drawing.Point(37, 277);
             this.label__AddRoomCost.Name = "label__AddRoomCost";
-            this.label__AddRoomCost.Size = new System.Drawing.Size(109, 13);
+            this.label__AddRoomCost.Size = new System.Drawing.Size(137, 17);
             this.label__AddRoomCost.TabIndex = 6;
             this.label__AddRoomCost.Text = "Введіть ціну кімнати";
             // 
@@ -121,9 +125,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // label__AddRoomHostle
             // 
             this.label__AddRoomHostle.AutoSize = true;
+            this.label__AddRoomHostle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label__AddRoomHostle.Location = new System.Drawing.Point(40, 355);
             this.label__AddRoomHostle.Name = "label__AddRoomHostle";
-            this.label__AddRoomHostle.Size = new System.Drawing.Size(107, 13);
+            this.label__AddRoomHostle.Size = new System.Drawing.Size(134, 17);
             this.label__AddRoomHostle.TabIndex = 8;
             this.label__AddRoomHostle.Text = "Оберіть гуртожиток";
             // 
@@ -138,15 +143,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.comboBox1.TabIndex = 9;
             this.comboBox1.ValueMember = "Id_Hostel";
             // 
-            // button1
+            // hostelBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(61, 453);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 33);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Додати кімнату";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.hostelBindingSource.DataMember = "Hostel";
+            this.hostelBindingSource.DataSource = this.bindingSource1;
             // 
             // bindingSource1
             // 
@@ -158,10 +158,18 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.cursovayaHostelDataSet.DataSetName = "CursovayaHostelDataSet";
             this.cursovayaHostelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // hostelBindingSource
+            // button1
             // 
-            this.hostelBindingSource.DataMember = "Hostel";
-            this.hostelBindingSource.DataSource = this.bindingSource1;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(61, 453);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 33);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Додати кімнату";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // hostelTableAdapter
             // 
@@ -171,6 +179,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(309, 517);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -186,9 +195,9 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Name = "AddRoom_Form";
             this.Text = "Додавання кімнати";
             this.Load += new System.EventHandler(this.AddRoom_Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.hostelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hostelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

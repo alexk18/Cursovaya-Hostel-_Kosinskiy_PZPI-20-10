@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
 {
@@ -28,9 +30,11 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
 
         private void button_ADDElDevice_Click(object sender, EventArgs e)
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+            float test = Convert.ToSingle(textBox_ElCoef.Text);
             connection.Open();
             SqlCommand command = new SqlCommand($"INSERT INTO ElectricalDevices VALUES ({Convert.ToInt32(textBox_ElDeviceID.Text)},'{textBox_ELDeviceName.Text}','{textBox_ElPower.Text}'," +
-                                                $"{Convert.ToSingle(textBox_ElCoef.Text)},{Convert.ToInt32(comboBox_ELDStud.Text)})", connection);
+                                                $"{test},{Convert.ToInt32(comboBox_ELDStud.Text)})", connection);
             command.ExecuteReader();
             connection.Close();
             MessageBox.Show(

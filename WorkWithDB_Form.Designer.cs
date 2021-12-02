@@ -238,6 +238,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Controls.Add(this.button1);
             this.Name = "WorkWithDB_Form";
             this.Text = "Робота з системою";
+            this.Load += new System.EventHandler(this.WorkWithDB_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

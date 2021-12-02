@@ -57,6 +57,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.statusStrip1.Size = new System.Drawing.Size(772, 26);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // toolStripStatusLabel1
             // 
@@ -97,6 +98,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_ListZvit.TabIndex = 2;
             this.button_ListZvit.Text = "Переглянути звіти";
             this.button_ListZvit.UseVisualStyleBackColor = false;
+            this.button_ListZvit.Click += new System.EventHandler(this.button_ListZvit_Click);
             // 
             // button_Oplata
             // 
@@ -110,6 +112,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_Oplata.TabIndex = 3;
             this.button_Oplata.Text = "Здійснити оплату";
             this.button_Oplata.UseVisualStyleBackColor = false;
+            this.button_Oplata.Click += new System.EventHandler(this.button_Oplata_Click);
             // 
             // button_Work
             // 

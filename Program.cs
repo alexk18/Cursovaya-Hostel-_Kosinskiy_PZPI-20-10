@@ -21,7 +21,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AddElDevice_Form());
+            //Application.Run(new ViewDB());
             Application.Run(new MainForm());
         }
     }

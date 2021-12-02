@@ -75,9 +75,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 connection.Open();
                 SqlCommand command3 = new SqlCommand($"SELECT Occupancy FROM Room WHERE Room_number = {numberRoom}", connection);
                 var count = Convert.ToInt32(command3.ExecuteScalar());
+                count = count + 1;
                 connection.Close();
                 connection.Open();
-                SqlCommand command2 = new SqlCommand($"UPDATE Room SET Occupancy = {count++} WHERE Room_number = {numberRoom}", connection);
+                SqlCommand command2 = new SqlCommand($"UPDATE Room SET Occupancy = {count} WHERE Room_number = {numberRoom}", connection);
                 command2.ExecuteReader();
                 connection.Close();
                 MessageBox.Show(

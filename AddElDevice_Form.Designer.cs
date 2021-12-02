@@ -41,15 +41,15 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.textBox_ElCoef = new System.Windows.Forms.TextBox();
             this.label_ELDStud = new System.Windows.Forms.Label();
             this.comboBox_ELDStud = new System.Windows.Forms.ComboBox();
+            this.residentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cursovayaHostelDataSet = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSet();
             this.residentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.residentTableAdapter = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSetTableAdapters.ResidentTableAdapter();
-            this.residentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_ADDElDevice
@@ -154,6 +154,11 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.comboBox_ELDStud.TabIndex = 15;
             this.comboBox_ELDStud.ValueMember = "IdCodeStudent";
             // 
+            // residentBindingSource1
+            // 
+            this.residentBindingSource1.DataMember = "Resident";
+            this.residentBindingSource1.DataSource = this.bindingSource1;
+            // 
             // bindingSource1
             // 
             this.bindingSource1.DataSource = this.cursovayaHostelDataSet;
@@ -172,11 +177,6 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // residentTableAdapter
             // 
             this.residentTableAdapter.ClearBeforeFill = true;
-            // 
-            // residentBindingSource1
-            // 
-            this.residentBindingSource1.DataMember = "Resident";
-            this.residentBindingSource1.DataSource = this.bindingSource1;
             // 
             // AddElDevice_Form
             // 
@@ -198,10 +198,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Name = "AddElDevice_Form";
             this.Text = "Додавання електричних приладів";
             this.Load += new System.EventHandler(this.AddElDevice_Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

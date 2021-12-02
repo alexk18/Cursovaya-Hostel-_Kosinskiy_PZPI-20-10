@@ -25,6 +25,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
 
             if (checkBox_Room.Checked == true)
             {
+                roomTableAdapter.Update(cursovayaHostelDataSet);
                 dataGridView1.DataSource = roomBindingSource;
                 checkBox_Resident.Enabled = false;
                 checkBox_Inventory.Enabled = false;
@@ -48,6 +49,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 checkBox_Male.Enabled = true;
                 checkBox_Female.Visible = true;
                 checkBox_Female.Enabled = true;
+                button_freeRoom.Enabled = true;
+                button_freeRoom.Visible = true;
+                button_UpdateRoom.Visible = true;
+                button_UpdateRoom.Enabled = true;
             }
             else
             {
@@ -74,6 +79,10 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 checkBox_Female.Enabled = false;
                 checkBox_Male.Visible = false;
                 checkBox_Male.Enabled = false;
+                button_freeRoom.Enabled = false;
+                button_freeRoom.Visible = false;
+                button_UpdateRoom.Visible = false;
+                button_UpdateRoom.Enabled = false;
             }
         }
 
@@ -122,6 +131,8 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 textBox_StudentBirth.Enabled = true;
                 button_StudentBirth.Enabled = true;
                 button_StudentBirth.Visible = true;
+                button_ResidentUpdate.Visible = true;
+                button_ResidentUpdate.Enabled = true;
             }
             else
             {
@@ -148,6 +159,8 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 textBox_StudentBirth.Enabled = false;
                 button_StudentBirth.Enabled = false;
                 button_StudentBirth.Visible = false;
+                button_ResidentUpdate.Visible = false;
+                button_ResidentUpdate.Enabled = false;
             }
         }
 
@@ -183,6 +196,8 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 textBox_InventRoom.Visible = true;
                 button_InventRoom.Enabled = true;
                 button_InventRoom.Visible = true;
+                button_UpdateInventory.Visible = true;
+                button_UpdateInventory.Enabled = true;
             }
             else
             {
@@ -209,6 +224,9 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 textBox_InventRoom.Visible = false;
                 button_InventRoom.Enabled = false;
                 button_InventRoom.Visible = false;
+                button_UpdateInventory.Visible = false;
+                button_UpdateInventory.Enabled = false;
+
             }
         }
 
@@ -241,6 +259,8 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 textBox_ELSTID.Visible = true;
                 button_ELSTID.Visible = true;
                 button_ELSTID.Enabled = true;
+                button_UpdateElDevice.Enabled = true;
+                button_UpdateElDevice.Visible = true;
             }
             else
             {
@@ -269,6 +289,8 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 textBox_ELSTID.Visible = false;
                 button_ELSTID.Visible = false;
                 button_ELSTID.Enabled = false;
+                button_UpdateElDevice.Enabled = false;
+                button_UpdateElDevice.Visible = false;
             }
         }
 
@@ -613,6 +635,64 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void button_freeRoom_Click(object sender, EventArgs e)
+        {
+
+            connection.Open();
+            SqlCommand command = new SqlCommand("SELECT * FROM Room WHERE Occupancy < 4", connection);
+            var reader = command.ExecuteReader();
+            DataTable dr = new DataTable();
+            dr.Load(reader);
+            dataGridView1.DataSource = dr;
+            connection.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DeleteData_Form form = new DeleteData_Form();
+            form.Show();
+            this.Close();
+            checkBox_Room.Checked = false;
+            checkBox_Resident.Checked = false;
+            checkBox_Inventory.Checked = false;
+            checkBox_Payment.Checked = false;
+            checkBox_ElDevice.Checked = false;
+        }
+
+        private void button_Update_Click(object sender, EventArgs e)
+        {
+            
+            int idRoom = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+            UpdateRoom_Form form1 = new UpdateRoom_Form(idRoom);
+            form1.Show();
+            Close();
+
+        }
+
+        private void button_ResidentUpdate_Click(object sender, EventArgs e)
+        {
+            int idResident = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+            UpdateResident_Form form = new UpdateResident_Form(idResident);
+            form.Show();
+            Close();
+        }
+
+        private void button_UpdateInventory_Click(object sender, EventArgs e)
+        {
+            int idFurnitureCode = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+            UpdateInventory_Form form = new UpdateInventory_Form(idFurnitureCode);
+            form.Show();
+            Close();
+        }
+
+        private void button_UpdateElDevice_Click(object sender, EventArgs e)
+        {
+            int idElDevice = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+            UpdateElDevice_Form form = new UpdateElDevice_Form(idElDevice) ;
+            form.Show();
+            Close();
         }
     }
     

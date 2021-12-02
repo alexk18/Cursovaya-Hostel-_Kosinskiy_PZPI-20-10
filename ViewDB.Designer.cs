@@ -100,6 +100,12 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.label_StudentBirth = new System.Windows.Forms.Label();
             this.textBox_StudentBirth = new System.Windows.Forms.TextBox();
             this.button_StudentBirth = new System.Windows.Forms.Button();
+            this.button_freeRoom = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button_UpdateRoom = new System.Windows.Forms.Button();
+            this.button_ResidentUpdate = new System.Windows.Forms.Button();
+            this.button_UpdateInventory = new System.Windows.Forms.Button();
+            this.button_UpdateElDevice = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
@@ -131,7 +137,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // checkBox_Room
             // 
             this.checkBox_Room.AutoSize = true;
-            this.checkBox_Room.Location = new System.Drawing.Point(643, 463);
+            this.checkBox_Room.Location = new System.Drawing.Point(643, 518);
             this.checkBox_Room.Name = "checkBox_Room";
             this.checkBox_Room.Size = new System.Drawing.Size(66, 17);
             this.checkBox_Room.TabIndex = 1;
@@ -142,7 +148,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // checkBox_Resident
             // 
             this.checkBox_Resident.AutoSize = true;
-            this.checkBox_Resident.Location = new System.Drawing.Point(751, 463);
+            this.checkBox_Resident.Location = new System.Drawing.Point(751, 518);
             this.checkBox_Resident.Name = "checkBox_Resident";
             this.checkBox_Resident.Size = new System.Drawing.Size(75, 17);
             this.checkBox_Resident.TabIndex = 2;
@@ -153,7 +159,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // checkBox_Inventory
             // 
             this.checkBox_Inventory.AutoSize = true;
-            this.checkBox_Inventory.Location = new System.Drawing.Point(862, 463);
+            this.checkBox_Inventory.Location = new System.Drawing.Point(861, 518);
             this.checkBox_Inventory.Name = "checkBox_Inventory";
             this.checkBox_Inventory.Size = new System.Drawing.Size(70, 17);
             this.checkBox_Inventory.TabIndex = 3;
@@ -164,7 +170,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // checkBox_ElDevice
             // 
             this.checkBox_ElDevice.AutoSize = true;
-            this.checkBox_ElDevice.Location = new System.Drawing.Point(963, 463);
+            this.checkBox_ElDevice.Location = new System.Drawing.Point(949, 518);
             this.checkBox_ElDevice.Name = "checkBox_ElDevice";
             this.checkBox_ElDevice.Size = new System.Drawing.Size(113, 17);
             this.checkBox_ElDevice.TabIndex = 4;
@@ -175,7 +181,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // checkBox_Payment
             // 
             this.checkBox_Payment.AutoSize = true;
-            this.checkBox_Payment.Location = new System.Drawing.Point(1096, 463);
+            this.checkBox_Payment.Location = new System.Drawing.Point(1096, 518);
             this.checkBox_Payment.Name = "checkBox_Payment";
             this.checkBox_Payment.Size = new System.Drawing.Size(63, 17);
             this.checkBox_Payment.TabIndex = 5;
@@ -187,7 +193,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(296, 458);
+            this.label1.Location = new System.Drawing.Point(296, 513);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 22);
             this.label1.TabIndex = 6;
@@ -815,12 +821,105 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_StudentBirth.Visible = false;
             this.button_StudentBirth.Click += new System.EventHandler(this.button_StudentBirth_Click);
             // 
+            // button_freeRoom
+            // 
+            this.button_freeRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_freeRoom.Enabled = false;
+            this.button_freeRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_freeRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_freeRoom.Location = new System.Drawing.Point(46, 497);
+            this.button_freeRoom.Name = "button_freeRoom";
+            this.button_freeRoom.Size = new System.Drawing.Size(214, 38);
+            this.button_freeRoom.TabIndex = 56;
+            this.button_freeRoom.Text = "Показати кімнати з вільними місцями";
+            this.button_freeRoom.UseVisualStyleBackColor = false;
+            this.button_freeRoom.Visible = false;
+            this.button_freeRoom.Click += new System.EventHandler(this.button_freeRoom_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(300, 435);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(214, 38);
+            this.button5.TabIndex = 57;
+            this.button5.Text = "Видалення даних";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button_UpdateRoom
+            // 
+            this.button_UpdateRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_UpdateRoom.Enabled = false;
+            this.button_UpdateRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_UpdateRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_UpdateRoom.Location = new System.Drawing.Point(558, 435);
+            this.button_UpdateRoom.Name = "button_UpdateRoom";
+            this.button_UpdateRoom.Size = new System.Drawing.Size(214, 38);
+            this.button_UpdateRoom.TabIndex = 58;
+            this.button_UpdateRoom.Text = "Оновлення даних";
+            this.button_UpdateRoom.UseVisualStyleBackColor = false;
+            this.button_UpdateRoom.Visible = false;
+            this.button_UpdateRoom.Click += new System.EventHandler(this.button_Update_Click);
+            // 
+            // button_ResidentUpdate
+            // 
+            this.button_ResidentUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_ResidentUpdate.Enabled = false;
+            this.button_ResidentUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_ResidentUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ResidentUpdate.Location = new System.Drawing.Point(558, 435);
+            this.button_ResidentUpdate.Name = "button_ResidentUpdate";
+            this.button_ResidentUpdate.Size = new System.Drawing.Size(214, 38);
+            this.button_ResidentUpdate.TabIndex = 59;
+            this.button_ResidentUpdate.Text = "Оновлення особистих справ мешканців";
+            this.button_ResidentUpdate.UseVisualStyleBackColor = false;
+            this.button_ResidentUpdate.Visible = false;
+            this.button_ResidentUpdate.Click += new System.EventHandler(this.button_ResidentUpdate_Click);
+            // 
+            // button_UpdateInventory
+            // 
+            this.button_UpdateInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_UpdateInventory.Enabled = false;
+            this.button_UpdateInventory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_UpdateInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_UpdateInventory.Location = new System.Drawing.Point(558, 435);
+            this.button_UpdateInventory.Name = "button_UpdateInventory";
+            this.button_UpdateInventory.Size = new System.Drawing.Size(214, 38);
+            this.button_UpdateInventory.TabIndex = 60;
+            this.button_UpdateInventory.Text = "Оновлення інвентарю";
+            this.button_UpdateInventory.UseVisualStyleBackColor = false;
+            this.button_UpdateInventory.Visible = false;
+            this.button_UpdateInventory.Click += new System.EventHandler(this.button_UpdateInventory_Click);
+            // 
+            // button_UpdateElDevice
+            // 
+            this.button_UpdateElDevice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_UpdateElDevice.Enabled = false;
+            this.button_UpdateElDevice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_UpdateElDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_UpdateElDevice.Location = new System.Drawing.Point(558, 435);
+            this.button_UpdateElDevice.Name = "button_UpdateElDevice";
+            this.button_UpdateElDevice.Size = new System.Drawing.Size(214, 38);
+            this.button_UpdateElDevice.TabIndex = 61;
+            this.button_UpdateElDevice.Text = "Оновлення електро приладів";
+            this.button_UpdateElDevice.UseVisualStyleBackColor = false;
+            this.button_UpdateElDevice.Visible = false;
+            this.button_UpdateElDevice.Click += new System.EventHandler(this.button_UpdateElDevice_Click);
+            // 
             // ViewDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1171, 557);
+            this.Controls.Add(this.button_UpdateElDevice);
+            this.Controls.Add(this.button_UpdateInventory);
+            this.Controls.Add(this.button_ResidentUpdate);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button_freeRoom);
             this.Controls.Add(this.label_StudentBirth);
             this.Controls.Add(this.textBox_StudentBirth);
             this.Controls.Add(this.button_StudentBirth);
@@ -874,6 +973,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_number_room);
+            this.Controls.Add(this.button_UpdateRoom);
             this.Name = "ViewDB";
             this.Text = "Перегляд бази даних";
             this.Load += new System.EventHandler(this.ViewDB_Load);
@@ -967,5 +1067,11 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private System.Windows.Forms.Label label_StudentBirth;
         private System.Windows.Forms.TextBox textBox_StudentBirth;
         private System.Windows.Forms.Button button_StudentBirth;
+        private System.Windows.Forms.Button button_freeRoom;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button_UpdateRoom;
+        private System.Windows.Forms.Button button_ResidentUpdate;
+        private System.Windows.Forms.Button button_UpdateInventory;
+        private System.Windows.Forms.Button button_UpdateElDevice;
     }
 }

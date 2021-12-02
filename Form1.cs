@@ -80,5 +80,22 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             WorkWithDB_Form Form = new WorkWithDB_Form();
             Form.Show();
         }
+
+        private void button_ListZvit_Click(object sender, EventArgs e)
+        {
+            ViewOtchet_Form form = new ViewOtchet_Form();
+            form.Show();
+        }
+
+        private void button_Oplata_Click(object sender, EventArgs e)
+        {
+            Payment_Form form = new Payment_Form();
+            form.Show();
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

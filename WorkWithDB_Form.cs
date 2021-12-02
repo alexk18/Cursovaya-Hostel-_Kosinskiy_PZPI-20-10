@@ -75,12 +75,21 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             }
             else
             {
-                double final_statistika = (Summa_Male * 100) / Summa_Female;
+                double final_statistika = (Summa_Male * 100) / Convert.ToDouble(sumachelovek);
                 label4.Text = Math.Round(final_statistika, 2).ToString()
                 +"%/" + ((100 - Math.Round(final_statistika, 2)).ToString()) + "%";
             }
-            
             connection.Close();
+            connection.Open();
+            SqlCommand command2 = new SqlCommand($"SELECT COUNT(Room_number) FROM Room WHERE Floor_number = {floor} ", connection);
+            int sumacomnat = Convert.ToInt32(command2.ExecuteScalar());
+            label6.Text = sumacomnat.ToString();
+            connection.Close();
+        }
+
+        private void WorkWithDB_Form_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
         }
     }
 }

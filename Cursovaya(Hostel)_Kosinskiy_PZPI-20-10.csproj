@@ -185,11 +185,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcceptRequest_Form.cs">
+    <Compile Include="AcceptingRequest_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AcceptRequest_Form.Designer.cs">
-      <DependentUpon>AcceptRequest_Form.cs</DependentUpon>
+    <Compile Include="AcceptingRequest_Form.Designer.cs">
+      <DependentUpon>AcceptingRequest_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDuty_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDuty_Form.Designer.cs">
+      <DependentUpon>AddDuty_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="AddElDevice_Form.cs">
       <SubType>Form</SubType>
@@ -222,6 +228,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CursovayaHostelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CursovayaHostelDataSetRequest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CursovayaHostelDataSetRequest.xsd</DependentUpon>
     </Compile>
     <Compile Include="DeleteData_Form.cs">
       <SubType>Form</SubType>
@@ -297,8 +308,11 @@
     <Compile Include="WorkWithDB_Form.Designer.cs">
       <DependentUpon>WorkWithDB_Form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AcceptRequest_Form.resx">
-      <DependentUpon>AcceptRequest_Form.cs</DependentUpon>
+    <EmbeddedResource Include="AcceptingRequest_Form.resx">
+      <DependentUpon>AcceptingRequest_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDuty_Form.resx">
+      <DependentUpon>AddDuty_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddElDevice_Form.resx">
       <DependentUpon>AddElDevice_Form.cs</DependentUpon>
@@ -368,6 +382,17 @@
     </None>
     <None Include="CursovayaHostelDataSet.xss">
       <DependentUpon>CursovayaHostelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CursovayaHostelDataSetRequest.xsc">
+      <DependentUpon>CursovayaHostelDataSetRequest.xsd</DependentUpon>
+    </None>
+    <None Include="CursovayaHostelDataSetRequest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CursovayaHostelDataSetRequest.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CursovayaHostelDataSetRequest.xss">
+      <DependentUpon>CursovayaHostelDataSetRequest.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

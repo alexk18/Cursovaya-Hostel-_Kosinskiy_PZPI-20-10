@@ -32,20 +32,31 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             {
                 int idStudent = Convert.ToInt32(comboBox_SearchResident.Text);
                 connection.Open();
+                SqlCommand command4 = new SqlCommand($"SELECT ElectricalDevices.Coefficient FROM ElectricalDevices LEFT JOIN Resident ON ElectricalDevices.IdCodeStudent = Resident.IdCodeStudent WHERE Resident.IdCodeStudent = {idStudent}", connection);
+                var coef = command4.ExecuteScalar();
+                connection.Close();
+                connection.Open();
                 SqlCommand command = new SqlCommand($"SELECT Room.Standart_cost FROM Room LEFT JOIN Resident ON Resident.Room_number = Room.Room_number WHERE Resident.IdCodeStudent = {idStudent}", connection);
                 int standarCost = Convert.ToInt32(command.ExecuteScalar());
                 connection.Close();
-                connection.Open();
-                SqlCommand command1 = new SqlCommand($"SELECT AVG(ElectricalDevices.Coefficient) FROM ElectricalDevices LEFT JOIN Resident ON Resident.IdCodeStudent = ElectricalDevices.IdCodeStudent WHERE Resident.IdCodeStudent = {idStudent}", connection);
-                float avgcoef = Convert.ToSingle(command1.ExecuteScalar());
-                Math.Round(avgcoef, 2);
-                connection.Close();
+                if (coef == null)
+                {
+                    label2.Text = standarCost.ToString();
+                }
+                else
+                {
+                    connection.Open();
+                    SqlCommand command1 = new SqlCommand($"SELECT AVG(ElectricalDevices.Coefficient) FROM ElectricalDevices LEFT JOIN Resident ON Resident.IdCodeStudent = ElectricalDevices.IdCodeStudent WHERE Resident.IdCodeStudent = {idStudent}", connection);
+                    float avgcoef = Convert.ToSingle(command1.ExecuteScalar());
+                    Math.Round(avgcoef, 2);
+                    label2.Text = (standarCost * avgcoef).ToString();
+                    connection.Close();
+                }
                 connection.Open();
                 SqlCommand command2 = new SqlCommand($"SELECT Payment.Payment_date FROM Payment LEFT JOIN Resident ON Resident.IdCodeStudent = Payment.IdCodeStudent WHERE Resident.IdCodeStudent = {idStudent}", connection);
                 var date = command2.ExecuteScalar();
-                connection.Close();
-                label2.Text = (standarCost * avgcoef).ToString();
                 label4.Text = date.ToString();
+                connection.Close();
             }
             else
             {
@@ -103,7 +114,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
 
         private void button_AcceptRequest_Click(object sender, EventArgs e)
         {
-            AcceptRequest_Form form = new AcceptRequest_Form();
+            AcceptingRequest_Form form = new AcceptingRequest_Form();
             form.Show();
         }
     }

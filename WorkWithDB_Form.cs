@@ -91,5 +91,11 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         {
             comboBox1.SelectedIndex = 0;
         }
+
+        private void button_AddDuty_Click(object sender, EventArgs e)
+        {
+            AddDuty_Form form = new AddDuty_Form();
+            form.Show();
+        }
     }
 }

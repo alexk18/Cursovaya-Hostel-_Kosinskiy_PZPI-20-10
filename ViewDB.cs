@@ -641,7 +641,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         {
 
             connection.Open();
-            SqlCommand command = new SqlCommand("SELECT * FROM Room WHERE Occupancy < 4", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM Room WHERE Occupancy < 3", connection);
             var reader = command.ExecuteReader();
             DataTable dr = new DataTable();
             dr.Load(reader);

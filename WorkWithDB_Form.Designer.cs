@@ -43,6 +43,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.button_AddDuty = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -216,12 +217,27 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button_AddDuty
+            // 
+            this.button_AddDuty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_AddDuty.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_AddDuty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AddDuty.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_AddDuty.Location = new System.Drawing.Point(886, 392);
+            this.button_AddDuty.Name = "button_AddDuty";
+            this.button_AddDuty.Size = new System.Drawing.Size(243, 39);
+            this.button_AddDuty.TabIndex = 14;
+            this.button_AddDuty.Text = "Додати інформацію про чергування";
+            this.button_AddDuty.UseVisualStyleBackColor = false;
+            this.button_AddDuty.Click += new System.EventHandler(this.button_AddDuty_Click);
+            // 
             // WorkWithDB_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1195, 514);
+            this.Controls.Add(this.button_AddDuty);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -260,5 +276,6 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button_AddDuty;
     }
 }

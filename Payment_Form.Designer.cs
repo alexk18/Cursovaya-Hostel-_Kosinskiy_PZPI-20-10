@@ -34,6 +34,9 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_ClosePayment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_SearchResident = new System.Windows.Forms.ComboBox();
+            this.residentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cursovayaHostelDataSet = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSet();
             this.label_LastPay = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,9 +45,6 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cursovayaHostelDataSet = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSet();
-            this.residentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.residentTableAdapter = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSetTableAdapters.ResidentTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,10 +56,16 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.textBox_PaymentSUM = new System.Windows.Forms.TextBox();
             this.textBox_PaymentAccept = new System.Windows.Forms.TextBox();
             this.button_SendRequest = new System.Windows.Forms.Button();
-            this.statusStrip1.SuspendLayout();
+            this.residentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomTableAdapter = new Cursovaya_Hostel__Kosinskiy_PZPI_20_10.CursovayaHostelDataSetTableAdapters.RoomTableAdapter();
+            this.button_AcceptRequest = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button_ClosePayment
@@ -96,6 +102,21 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.comboBox_SearchResident.Size = new System.Drawing.Size(252, 21);
             this.comboBox_SearchResident.TabIndex = 6;
             this.comboBox_SearchResident.ValueMember = "IdCodeStudent";
+            // 
+            // residentBindingSource
+            // 
+            this.residentBindingSource.DataMember = "Resident";
+            this.residentBindingSource.DataSource = this.bindingSource1;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.cursovayaHostelDataSet;
+            this.bindingSource1.Position = 0;
+            // 
+            // cursovayaHostelDataSet
+            // 
+            this.cursovayaHostelDataSet.DataSetName = "CursovayaHostelDataSet";
+            this.cursovayaHostelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label_LastPay
             // 
@@ -177,21 +198,6 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 21);
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.cursovayaHostelDataSet;
-            this.bindingSource1.Position = 0;
-            // 
-            // cursovayaHostelDataSet
-            // 
-            this.cursovayaHostelDataSet.DataSetName = "CursovayaHostelDataSet";
-            this.cursovayaHostelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // residentBindingSource
-            // 
-            this.residentBindingSource.DataMember = "Resident";
-            this.residentBindingSource.DataSource = this.bindingSource1;
-            // 
             // residentTableAdapter
             // 
             this.residentTableAdapter.ClearBeforeFill = true;
@@ -248,19 +254,25 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             // 
             // comboBox_PaymentIDResident
             // 
+            this.comboBox_PaymentIDResident.DataSource = this.residentBindingSource1;
+            this.comboBox_PaymentIDResident.DisplayMember = "IdCodeStudent";
             this.comboBox_PaymentIDResident.FormattingEnabled = true;
             this.comboBox_PaymentIDResident.Location = new System.Drawing.Point(299, 334);
             this.comboBox_PaymentIDResident.Name = "comboBox_PaymentIDResident";
             this.comboBox_PaymentIDResident.Size = new System.Drawing.Size(121, 21);
             this.comboBox_PaymentIDResident.TabIndex = 18;
+            this.comboBox_PaymentIDResident.ValueMember = "IdCodeStudent";
             // 
             // comboBox_PaymentRoomNumber
             // 
+            this.comboBox_PaymentRoomNumber.DataSource = this.roomBindingSource;
+            this.comboBox_PaymentRoomNumber.DisplayMember = "Room_number";
             this.comboBox_PaymentRoomNumber.FormattingEnabled = true;
             this.comboBox_PaymentRoomNumber.Location = new System.Drawing.Point(299, 375);
             this.comboBox_PaymentRoomNumber.Name = "comboBox_PaymentRoomNumber";
             this.comboBox_PaymentRoomNumber.Size = new System.Drawing.Size(121, 21);
             this.comboBox_PaymentRoomNumber.TabIndex = 19;
+            this.comboBox_PaymentRoomNumber.ValueMember = "Room_number";
             // 
             // textBox_PaymentSUM
             // 
@@ -286,8 +298,37 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_SendRequest.Name = "button_SendRequest";
             this.button_SendRequest.Size = new System.Drawing.Size(225, 36);
             this.button_SendRequest.TabIndex = 22;
-            this.button_SendRequest.Text = "Дізнатися інформацію";
+            this.button_SendRequest.Text = "Відправити заявку";
             this.button_SendRequest.UseVisualStyleBackColor = false;
+            this.button_SendRequest.Click += new System.EventHandler(this.button_SendRequest_Click);
+            // 
+            // residentBindingSource1
+            // 
+            this.residentBindingSource1.DataMember = "Resident";
+            this.residentBindingSource1.DataSource = this.bindingSource1;
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.bindingSource1;
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
+            // 
+            // button_AcceptRequest
+            // 
+            this.button_AcceptRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_AcceptRequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_AcceptRequest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_AcceptRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AcceptRequest.Location = new System.Drawing.Point(752, 101);
+            this.button_AcceptRequest.Name = "button_AcceptRequest";
+            this.button_AcceptRequest.Size = new System.Drawing.Size(268, 43);
+            this.button_AcceptRequest.TabIndex = 23;
+            this.button_AcceptRequest.Text = "Перевірити заяви";
+            this.button_AcceptRequest.UseVisualStyleBackColor = false;
+            this.button_AcceptRequest.Click += new System.EventHandler(this.button_AcceptRequest_Click);
             // 
             // Payment_Form
             // 
@@ -295,6 +336,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1032, 555);
+            this.Controls.Add(this.button_AcceptRequest);
             this.Controls.Add(this.button_SendRequest);
             this.Controls.Add(this.textBox_PaymentAccept);
             this.Controls.Add(this.textBox_PaymentSUM);
@@ -317,11 +359,13 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.Name = "Payment_Form";
             this.Text = "Оплата гуртожитку";
             this.Load += new System.EventHandler(this.Payment_Form_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,5 +398,9 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private System.Windows.Forms.TextBox textBox_PaymentSUM;
         private System.Windows.Forms.TextBox textBox_PaymentAccept;
         private System.Windows.Forms.Button button_SendRequest;
+        private System.Windows.Forms.BindingSource residentBindingSource1;
+        private System.Windows.Forms.BindingSource roomBindingSource;
+        private CursovayaHostelDataSetTableAdapters.RoomTableAdapter roomTableAdapter;
+        private System.Windows.Forms.Button button_AcceptRequest;
     }
 }

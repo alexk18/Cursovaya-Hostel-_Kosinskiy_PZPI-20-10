@@ -321,7 +321,8 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 button_payment_studentId.Enabled = true;
                 textBox_payment_studentId.Visible = true;
                 textBox_payment_studentId.Enabled = true;
-
+                button_UpdatePayment.Enabled = true;
+                button_UpdatePayment.Visible= true;
             }
             else
             {
@@ -348,6 +349,8 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 label5.Enabled = false;
                 label6.Enabled = false;
                 label6.Visible = false;
+                button_UpdatePayment.Enabled = false;
+                button_UpdatePayment.Visible = false;
             }
         }
 
@@ -691,6 +694,14 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         {
             int idElDevice = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
             UpdateElDevice_Form form = new UpdateElDevice_Form(idElDevice) ;
+            form.Show();
+            Close();
+        }
+
+        private void button_UpdatePayment_Click(object sender, EventArgs e)
+        {
+            int idPayment = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+            Update_Payment_Form form = new Update_Payment_Form(idPayment);
             form.Show();
             Close();
         }

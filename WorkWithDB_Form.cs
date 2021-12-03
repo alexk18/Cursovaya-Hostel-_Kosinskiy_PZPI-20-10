@@ -13,6 +13,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
 {
     public partial class WorkWithDB_Form : Form
     {
+        
         SqlConnection connection = new SqlConnection("Data Source=DESKTOP-T2K3THA;Initial Catalog=CursovayaHostel;Integrated Security=True");
         public WorkWithDB_Form()
         {
@@ -95,6 +96,12 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private void button_AddDuty_Click(object sender, EventArgs e)
         {
             AddDuty_Form form = new AddDuty_Form();
+            form.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Authomatization_Form form = new Authomatization_Form();
             form.Show();
         }
     }

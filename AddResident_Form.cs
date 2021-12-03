@@ -67,7 +67,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
                 connection.Open();
                 SqlCommand command = new SqlCommand($"INSERT INTO Resident VALUES({Convert.ToInt32(textBox_IDCodeStudent.Text)},'{textBox_ResidentName.Text}','{textBox_ResidentSurname.Text}'," +
                                                     $"'{textBox_ResidentMidleName.Text}',{Convert.ToInt32(textBox_Birthday.Text)}," +
-                                                    $"'{comboBox_Gender.Text}','{dateTimePicker_ColonizeTime.Text/*.Value.ToString()*/}','{textBox_Group.Text}',{Convert.ToInt32(comboBox_Course.Text)}," +
+                                                    $"'{comboBox_Gender.Text}','{dateTimePicker_ColonizeTime.Text}','{textBox_Group.Text}',{Convert.ToInt32(comboBox_Course.Text)}," +
                                                     $"'{textBox_PhoneNumber.Text}',{Convert.ToInt32(comboBox1.Text)})", connection);
                 command.ExecuteReader();
                 connection.Close();

@@ -215,6 +215,12 @@
     <Compile Include="AddRoom_Form.Designer.cs">
       <DependentUpon>AddRoom_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Authomatization_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authomatization_Form.Designer.cs">
+      <DependentUpon>Authomatization_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resident.cs" />
+    <Compile Include="ResidentList.cs" />
     <Compile Include="UpdateElDevice_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +297,12 @@
     </Compile>
     <Compile Include="UpdateRoom_Form.Designer.cs">
       <DependentUpon>UpdateRoom_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Payment_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Payment_Form.Designer.cs">
+      <DependentUpon>Update_Payment_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewDB.cs">
       <SubType>Form</SubType>
@@ -322,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddRoom_Form.resx">
       <DependentUpon>AddRoom_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authomatization_Form.resx">
+      <DependentUpon>Authomatization_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
@@ -362,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateRoom_Form.resx">
       <DependentUpon>UpdateRoom_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Payment_Form.resx">
+      <DependentUpon>Update_Payment_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewDB.resx">
       <DependentUpon>ViewDB.cs</DependentUpon>

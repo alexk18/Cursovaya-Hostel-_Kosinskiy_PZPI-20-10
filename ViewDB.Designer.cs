@@ -106,6 +106,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_ResidentUpdate = new System.Windows.Forms.Button();
             this.button_UpdateInventory = new System.Windows.Forms.Button();
             this.button_UpdateElDevice = new System.Windows.Forms.Button();
+            this.button_UpdatePayment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursovayaHostelDataSet)).BeginInit();
@@ -909,12 +910,28 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             this.button_UpdateElDevice.Visible = false;
             this.button_UpdateElDevice.Click += new System.EventHandler(this.button_UpdateElDevice_Click);
             // 
+            // button_UpdatePayment
+            // 
+            this.button_UpdatePayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.button_UpdatePayment.Enabled = false;
+            this.button_UpdatePayment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(121)))), ((int)(((byte)(239)))));
+            this.button_UpdatePayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_UpdatePayment.Location = new System.Drawing.Point(558, 435);
+            this.button_UpdatePayment.Name = "button_UpdatePayment";
+            this.button_UpdatePayment.Size = new System.Drawing.Size(214, 38);
+            this.button_UpdatePayment.TabIndex = 62;
+            this.button_UpdatePayment.Text = "Оновлення платежів";
+            this.button_UpdatePayment.UseVisualStyleBackColor = false;
+            this.button_UpdatePayment.Visible = false;
+            this.button_UpdatePayment.Click += new System.EventHandler(this.button_UpdatePayment_Click);
+            // 
             // ViewDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1171, 557);
+            this.Controls.Add(this.button_UpdatePayment);
             this.Controls.Add(this.button_UpdateElDevice);
             this.Controls.Add(this.button_UpdateInventory);
             this.Controls.Add(this.button_ResidentUpdate);
@@ -1073,5 +1090,6 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         private System.Windows.Forms.Button button_ResidentUpdate;
         private System.Windows.Forms.Button button_UpdateInventory;
         private System.Windows.Forms.Button button_UpdateElDevice;
+        private System.Windows.Forms.Button button_UpdatePayment;
     }
 }

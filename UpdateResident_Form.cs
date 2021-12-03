@@ -33,7 +33,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
             textBox_UpdateResidentMidleName.Text = Convert.ToString(dr.Rows[0][3]);
             textBox_UpdateBirthday.Text = Convert.ToString(dr.Rows[0][4]);
             comboBox_UpdateGender.Text = Convert.ToString(dr.Rows[0][5]);
-            dateTimePicker_UpdateColonizeTime.Value = Convert.ToDateTime(dr.Rows[0][6]);
+            dateTimePicker_UpdateColonizeTime.Value = (Convert.ToDateTime(dr.Rows[0][6]));
             textBox_UpdateGroup.Text = Convert.ToString(dr.Rows[0][7]);
             comboBox_UpdateCourse.Text = Convert.ToString(dr.Rows[0][8]);
             textBox_UpdatePhoneNumber.Text = Convert.ToString(dr.Rows[0][9]);
@@ -44,7 +44,7 @@ namespace Cursovaya_Hostel__Kosinskiy_PZPI_20_10
         {
             connection.Open();
             SqlCommand command1 = new SqlCommand($"UPDATE Resident SET [Name] = '{textBox_UpdateResidentName.Text}' , Surname = '{textBox_UpdateResidentSurname.Text}', Midle_name='{textBox_UpdateResidentMidleName.Text}', " +
-                                                $"Year_birth = {Convert.ToInt32(textBox_UpdateBirthday.Text)}, Gender = '{comboBox_UpdateGender.Text}',Colonize_date = '{Convert.ToDateTime(dateTimePicker_UpdateColonizeTime.Value)}',Study_group = '{textBox_UpdateGroup}',Course = {Convert.ToInt32(comboBox_UpdateCourse.Text)}," +
+                                                $"Year_birth = {Convert.ToInt32(textBox_UpdateBirthday.Text)}, Gender = '{comboBox_UpdateGender.Text}',Colonize_date = '{Convert.ToDateTime(dateTimePicker_UpdateColonizeTime.Value.ToString("yyyy-MM-dd"))}',Study_group = '{textBox_UpdateGroup.Text}',Course = {Convert.ToInt32(comboBox_UpdateCourse.Text)}," +
                                                 $"Mobile_number = '{textBox_UpdatePhoneNumber.Text}' WHERE IdCodeStudent = {IdResident}", connection);
             command1.ExecuteReader();
             ViewDB form = new ViewDB();
